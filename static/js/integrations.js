@@ -193,7 +193,7 @@ const spotbugsIntegration = {
             id: null,
 
             save_intermediates_to: '/data/intermediates/sast',
-            scan_opts: null,
+            scan_opts: "",
 
             pluginName: 'security_scanner_spotbugs',
             api_base: '/api/v1/integrations/',

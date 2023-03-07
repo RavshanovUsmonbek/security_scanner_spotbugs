@@ -63,7 +63,7 @@ const spotbugsIntegration = {
             // toggle: false,
             error: {},
             save_intermediates_to: '/data/intermediates/sast',
-            scan_opts: null,
+            scan_opts: "",
         })
     },
     template: `
@@ -77,25 +77,27 @@ const spotbugsIntegration = {
                 </div>
             </div>
             <div class="form-group">
-                <h9>Save intermediates to</h9>
-                <p>
-                    <h13>Optional</h13>
-                </p>
-                <input type="text" class="form-control form-control-alternative"
-                    placeholder=""
-                    v-model="save_intermediates_to"
-                    :class="{ 'is-invalid': error.save_intermediates_to }">
-                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                <form autocomplete="off">
+                    <h9>Save intermediates to</h9>
+                    <p>
+                        <h13>Optional</h13>
+                    </p>
+                    <input type="text" class="form-control form-control-alternative"
+                        placeholder=""
+                        v-model="save_intermediates_to"
+                        :class="{ 'is-invalid': error.save_intermediates_to }">
+                    <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
 
-                <h9>Additional options</h9>
-                <p>
-                    <h13>Optional</h13>
-                </p>
-                <input type="text" class="form-control form-control-alternative"
-                    placeholder="additional options"
-                    v-model="scan_opts"
-                    :class="{ 'is-invalid': error.scan_opts }">
-                <div class="invalid-feedback">[[ error.scan_opts ]]</div>
+                    <h9>Additional options</h9>
+                    <p>
+                        <h13>Optional</h13>
+                    </p>
+                    <input type="text" class="form-control form-control-alternative"
+                        placeholder="additional options"
+                        v-model="scan_opts"
+                        :class="{ 'is-invalid': error.scan_opts }">
+                    <div class="invalid-feedback">[[ error.scan_opts ]]</div>
+                </form>
             </div>
         </div>
     `
